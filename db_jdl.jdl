@@ -1,0 +1,35 @@
+entity Produit {
+	designation String required,
+    description String,
+    image String,
+    prix Float required
+}
+
+entity Categorie {
+	nom String required
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Commande {
+	date Instant required,
+	adresse String required,
+	note String
+}
+
+entity User {
+
+}
+
+relationship ManyToMany {
+	 Commande to  Produit
+}
+
+// defining multiple OneToMany relationships with comments
+
+
+relationship ManyToOne {
+	Produit{categorie(nom)} to Categorie
+    Commande{user(login)} to User
+}
+
