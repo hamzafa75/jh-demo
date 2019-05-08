@@ -20,6 +20,8 @@ import { JhDemoEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+// Require devExtrem components
+import { DxButtonModule } from 'devextreme-angular';
 
 @NgModule({
   imports: [
@@ -36,7 +38,8 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
     JhDemoAccountModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     JhDemoEntityModule,
-    JhDemoAppRoutingModule
+    JhDemoAppRoutingModule,
+    DxButtonModule
   ],
   declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
   providers: [
